@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 name 'Goddess'
-author 'Goddess Security'
+author 'Goddess Development'
 description 'Modular server-authoritative security system for ESX Legacy servers'
 version '1.0.0'
 
