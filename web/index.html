@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Goddess</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="hidden">
+    <div class="backdrop"></div>
+    <div class="panel">
+      <header class="panel-header">
+        <div class="brand">
+          <span class="brand-mark">G</span>
+          <div class="brand-text">
+            <h1>Goddess</h1>
+            <span class="version" id="version">v1.0.0</span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <span class="db-status" id="dbStatus">DB: —</span>
+          <button class="icon-btn" id="refreshBtn" title="Refresh">⟳</button>
+          <button class="icon-btn close-btn" id="closeBtn" title="Close">✕</button>
+        </div>
+      </header>
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="overview">Overview</button>
+        <button class="tab" data-tab="players">Players</button>
+        <button class="tab" data-tab="detections">Detections</button>
+        <button class="tab" data-tab="bans">Bans</button>
+      </nav>
+
+      <main class="content">
+        <section id="tab-overview" class="tab-panel active">
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-label">Online Players</span>
+              <span class="stat-value" id="statOnline">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Suspicious Players</span>
+              <span class="stat-value" id="statSuspicious">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Recent Detections</span>
+              <span class="stat-value" id="statDetections">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Active Bans</span>
+              <span class="stat-value" id="statBans">0</span>
+            </div>
+          </div>
+          <div class="panel-block">
+            <h2>Server Health</h2>
+            <div class="health-row">
+              <span class="dot green"></span>
+              <span>Goddess is monitoring this server.</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="tab-players" class="tab-panel">
+          <table class="data-table" id="playersTable">
+            <thead>
+              <tr><th>ID</th><th>Name</th><th>Suspicion</th><th>Status</th><th>Actions</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <section id="tab-detections" class="tab-panel">
+          <table class="data-table" id="detectionsTable">
+            <thead>
+              <tr><th>Time</th><th>Player</th><th>Detection</th><th>Severity</th><th>Score</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <section id="tab-bans" class="tab-panel">
+          <table class="data-table" id="bansTable">
+            <thead>
+              <tr><th>Player</th><th>License</th><th>Reason</th><th>Date</th><th>Actions</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
